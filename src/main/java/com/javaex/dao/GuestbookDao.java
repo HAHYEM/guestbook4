@@ -1,5 +1,5 @@
-package com.javaex.dao;
-
+package com.javaex.dao;				//DAO는 시키는 용도로 사용하는 것이다.
+									//controller와 DAO를 연결해주는 @service를 만들어줘야 함.
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -11,8 +11,8 @@ import com.javaex.vo.GuestbookVo;
 @Repository
 public class GuestbookDao {
 	
-	@Autowired
-	private SqlSession sqlSession;
+	@Autowired		//연결을 해주는 역할
+	private SqlSession sqlSession;	//DAO에서 만들고 sqlSession으로 활용하는 것. --> 두개를 다 DAO라고 봐도 됨. DB에 넣어주는 역할이기 때문이다.
 	
 	public List<GuestbookVo> getList(){
 		
